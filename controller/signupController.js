@@ -39,7 +39,7 @@ exports.registerUser = async (req, res) => {
         await newUser.save();
 
 
-        const verificationLink = `http://localhost:5000/verify-email?token=${verificationToken}`
+        const verificationLink = `https://payrem.onrender.com/verify-email?token=${verificationToken}`
 
         const htmlcontent = await verifyTemplate.verifyEmailTemplate(updatedUser,verificationLink);
         
